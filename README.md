@@ -1,15 +1,15 @@
-#Perfect Squares
+# Perfect Squares
 
-##Group Info
+## Group Info
 * Vineeth Chennapalli - 31242465
 
 
-##Size of Work Unit
+## Size of Work Unit
 * I experimented initially by creating N/c number of actors where each actor is responsible for calculating the k consecutive squares sum for c values. I experimented by considering a couple of values for c (10, 100 etc).
 * While this worked well for all the sizes, I realized that I could potentially create more actors than N/c number when the number N is small. I understood that this would excute my code in a more concurrent manner. Therefore, I decided to create N actors when N < 20000 and about 10000 actors when N >= 20000. Finally, work unit size is 1 when N < 20000 and around N/10000 when N >= 20000.
 
 
-##Running Instructions
+## Running Instructions
 
 * Ensure that the mix.exs and proj1.exs are present in the same directory. Run the following command with desired values of N and k.
 ```
@@ -19,12 +19,12 @@ mix run proj1.exs N k
 * Output Format: All the starting numbers of the perfect square series will be printed in a new line one after the other. 
 
 
-##Performance Measurements
+## Performance Measurements
 
 * For N = 1000000 and k = 4, I didn't receive any output. I got an average CPU/Real time ratio of 2.8 on a quad-core machine.
 
 
-##Solved Test Cases
+## Solved Test Cases
 
 * The largest test case I considered was with N = 100000000 and k = 24. I got 43 numbers and the following is the output.
 
